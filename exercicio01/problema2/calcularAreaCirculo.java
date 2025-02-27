@@ -24,6 +24,8 @@ public class calcularAreaCirculo {
 
         double area = calcularArea(raio);
 
-        System.out.printf("A área do círculo é %.2f%n", area);
+        System.out.printf("A área do círculo é %.2f", area);
+
+        sc.close();
     }
 }
