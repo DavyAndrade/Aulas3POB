@@ -8,7 +8,6 @@ das categorias abaixo, utilizando if-else:
  */
 
 import java.util.Scanner;
- 
 
 public class ClassificacaoIdade {
     public static void main(String[] args) {
@@ -24,5 +23,6 @@ public class ClassificacaoIdade {
         } else {
             System.out.println("Idoso");
         }
+        sc.close();
     }
 }

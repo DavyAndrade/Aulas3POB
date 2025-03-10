@@ -3,7 +3,7 @@
 Escreva um programa que solicite ao usuário dois números inteiros e exiba a soma deles.
 */
 
-package exercicio01.problema1;
+package exercicios01.problema1;
 
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ public class SomaNumeros {
 
         int sum = sumTwoNumers(num1, num2);
 
-        System.out.println("A soma dos números é: " + sum);
+        System.out.print("A soma dos números é: " + sum);
 
         sc.close();
     }

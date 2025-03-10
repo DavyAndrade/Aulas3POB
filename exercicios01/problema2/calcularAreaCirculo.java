@@ -7,7 +7,7 @@ Fórmula: Área = π * raio²
 Considere π = 3.14159.
 */
 
-package exercicio01.problema2;
+package exercicios01.problema2;
 
 import java.util.Scanner;
 

@@ -5,7 +5,7 @@ Desenvolva um programa que leia a idade de uma pessoa em anos e exiba a quantida
 Considere um ano com 365 dias.
  */
 
-package exercicio01.problema5;
+package exercicios01.problema5;
 
 import java.util.Scanner;
 
@@ -24,6 +24,7 @@ public class ConversaoDias {
         int dias = anosParaDias(idade);
 
         System.out.printf("Você viveu aproximadamente %d dias", dias);
+        
         sc.close();
     }
 }
