@@ -4,7 +4,7 @@ Escreva um programa que receba o salário bruto de um funcionário e o valor de 
 
  */
 
-package exercicio01.problema6;
+package exercicios01.problema6;
 
 import java.util.Scanner;
 

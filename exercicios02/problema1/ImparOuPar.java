@@ -31,6 +31,7 @@ public class ImparOuPar {
         } else {
             System.out.printf("%d é Ímpar\n", numero);
         }
+        sc.close();
 
     }
 }

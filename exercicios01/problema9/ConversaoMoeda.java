@@ -3,7 +3,7 @@
 Faça um programa que leia um valor em reais (R$) e a cotação do dólar no dia. O programa deve calcular e exibir o valor equivalente em dólares (US$).
  */
 
-package exercicio01.problema9;
+package exercicios01.problema9;
 
 import java.util.Scanner;
 
@@ -24,5 +24,7 @@ public class ConversaoMoeda {
         double dolares = convert(reais, cotacao);
 
         System.out.printf("O valor equivalente em dólares é: %.2f US$", dolares);
+
+        sc.close();
     }
 }

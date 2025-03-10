@@ -5,7 +5,7 @@ Desenvolva um programa que leia as coordenadas x1, y1 e x2, y2 de dois pontos no
 Fórmula: D = sqrt((x2 - x1)² + (y2 - y1)²)
  */
 
-package exercicio01.problema10;
+package exercicios01.problema10;
 
 public class DistanciaEntreDoisPontos {
     public static double calcularDistancia(int x1, int x2, int y1, int y2) {

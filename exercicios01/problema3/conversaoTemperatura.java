@@ -6,7 +6,7 @@ Fórmula: F = (C × 9/5) + 32.
 
 */
 
-package exercicio01.problema3;
+package exercicios01.problema3;
 
 public class conversaoTemperatura {
     public static double celsiusToFahrenheit(double celsius) {
