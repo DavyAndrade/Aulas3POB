@@ -1,12 +1,11 @@
 package beanProject.src.controller;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-import beanProject.src.domain.Pessoa;
+import domain.Pessoa;
 
 public class PessoaController {
-    public void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Entre com o nome: ");
@@ -27,6 +26,12 @@ public class PessoaController {
         Pessoa pessoa = new Pessoa(nome, idade, altura, peso, sexo);
 
         pessoa.listarPessoa();
+
+        double imc = pessoa.calcularIMC();
+
+        pessoa.calcularIMC();
+
+        System.out.printf("IMC: %.2f", imc);
 
         sc.close();
     }
