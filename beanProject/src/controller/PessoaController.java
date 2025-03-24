@@ -1,8 +1,7 @@
-package beanProject.src.controller;
+package src.controller;
 
 import java.util.Scanner;
-
-import domain.Pessoa;
+import src.domain.Pessoa;
 
 public class PessoaController {
     public static void main(String[] args) {
@@ -23,15 +22,14 @@ public class PessoaController {
         System.out.print("Entre com o sexo (M/F): ");
         char sexo = sc.next().charAt(0);
 
-        Pessoa pessoa = new Pessoa(nome, idade, altura, peso, sexo);
+        Pessoa p = new Pessoa(nome, idade, altura, peso, sexo);
 
-        pessoa.listarPessoa();
+        p.listarPessoa();
 
-        double imc = pessoa.calcularIMC();
-
-        pessoa.calcularIMC();
+        double imc = p.calcularIMC();
 
         System.out.printf("IMC: %.2f", imc);
+        p.classificarIMC();
 
         sc.close();
     }
