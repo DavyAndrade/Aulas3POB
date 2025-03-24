@@ -1,5 +1,4 @@
-package src.domain;
-
+package beanProject.src.domain;
 public class Pessoa {
     private String nome;
     private int idade;

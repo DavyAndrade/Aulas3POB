@@ -1,7 +1,8 @@
-package src.controller;
+package beanProject.src.controller;
 
 import java.util.Scanner;
-import src.domain.Pessoa;
+
+import beanProject.src.domain.Pessoa;
 
 public class PessoaController {
     public static void main(String[] args) {
