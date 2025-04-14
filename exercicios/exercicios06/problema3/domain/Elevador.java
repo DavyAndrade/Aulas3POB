@@ -1,7 +1,8 @@
 package exercicios06.problema3.domain;
 
 public class Elevador {
-    private int andarAtual, totalAndares;
+    private int andarAtual
+    private int totalAndares;
 
     public Elevador(int andarAtual, int totalAndares) {
         this.totalAndares = totalAndares;
@@ -26,5 +27,21 @@ public class Elevador {
 
     public void exibirAndar() {
         System.out.println("Andar Atual: " + andarAtual);
+    }
+
+    public int getAndarAtual() {
+        return this.andarAtual;
+    }
+
+    public void setAndarAtual(int andarAtual) {
+        this.andarAtual = andarAtual;
+    }
+
+    public int getTotalAndares() {
+        return this.totalAndares;
+    }
+
+    public void setTotalAndares(int totalAndares) {
+        this.totalAndares = totalAndares;
     }
 }

@@ -24,4 +24,12 @@ public class CaixaEletronico {
     public void exibirSaldo() {
         System.out.println("Saldo Atual: " + saldo);
     }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
 }

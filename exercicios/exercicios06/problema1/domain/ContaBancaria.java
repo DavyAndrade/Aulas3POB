@@ -18,7 +18,7 @@ public class ContaBancaria {
     }
 
     public void sacar(double valor) {
-        if (saldo < 0) {
+        if (saldo < 0 || saldo < valor) {
             System.out.println("Saldo insuficiente para saque.");
         } else {
             saldo -= valor;
@@ -27,5 +27,21 @@ public class ContaBancaria {
 
     public void exibirSaldo() {
         System.out.println("Saldo de " + titular + ": " + saldo);
+    }
+
+    public String getTitular() {
+        return this.titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public double getSaldo() {
+        return this.saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }

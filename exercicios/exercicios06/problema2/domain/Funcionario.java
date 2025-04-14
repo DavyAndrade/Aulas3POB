@@ -1,7 +1,8 @@
 package exercicios06.problema2.domain;
 
 public class Funcionario {
-    private String nome, categoria;
+    private String nome;
+    private String categoria;
     private double salarioBase;
 
     public Funcionario(String nome, String categoria, double salarioBase) {
@@ -26,4 +27,21 @@ public class Funcionario {
                 return 0;
         }
     }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getSalarioBase() {
+        return this.salarioBase;
+    }
+
+    public void setSalarioBase(double salarioBase) {
+        this.salarioBase = salarioBase;
+    }
+
 }
