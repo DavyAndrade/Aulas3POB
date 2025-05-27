@@ -1,4 +1,4 @@
-package AlunoTxt.model;
+package alunotxt.model;
 
 public class Aluno {
     private int matricula;
