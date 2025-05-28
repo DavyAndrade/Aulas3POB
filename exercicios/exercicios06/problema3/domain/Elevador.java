@@ -1,7 +1,7 @@
 package exercicios06.problema3.domain;
 
 public class Elevador {
-    private int andarAtual
+    private int andarAtual;
     private int totalAndares;
 
     public Elevador(int andarAtual, int totalAndares) {
