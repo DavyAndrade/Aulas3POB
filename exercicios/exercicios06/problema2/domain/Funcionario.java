@@ -11,7 +11,7 @@ public class Funcionario {
         this.salarioBase = salarioBase;
     }
 
-    public double calcularSalarioFinal(String categoria) {
+    public double calcularSalarioFinal() {
         switch (categoria) {
             case "A":
                 return salarioBase + (salarioBase * 0.2);
