@@ -1,12 +1,19 @@
 # 3POB
 
-## Exercícios
+## Listas de Exercícios
 
-Lista 1 — Exercícios 01 (Revisão)
-Lista 2 — Exercícios 02 (Estruturas Condicionais)
-Lista 3 — Exercícios 03 (Estruturas de Repetição)
-Lista 4 — Exercícios 04 (Manipulação de Arrays)
-Lista 5 — Exercícios 05 (Manipulação de ArrayList)
-Lista 6 — Exercícios 06 (Criação de Classes e Pacotes)
-Lista 7 — Exercícios 07 (Herança)
-Lista 8 — Exercícios 08 (Interfaces)
+- Lista 1 — Introdução ao Java
+- Lista 2 — Estruturas Condicionais
+- Lista 3 — Estruturas de Repetição
+- Lista 4 — Manipulação de Arrays
+- Lista 5 — Manipulação de ArrayList
+- Lista 6 — Criação de Classes e Pacotes
+- Lista 7 — Herança
+- Lista 8 — Interfaces
+
+# Exercícios Extras
+
+- Arquivo (Arquivo de Texto)
+- Calcular_IMC (Exercício de Aula)
+- Exceções
+- Extras de Herança
