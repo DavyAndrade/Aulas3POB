@@ -1,9 +1,9 @@
 package Exercicios.Lista7.Exercicio02.model;
 
 public class Moto extends Veiculo {
-    private double cilindrada;
+    private int cilindrada;
 
-    public Moto(String marca, String modelo, int ano, double cilindrada) {
+    public Moto(String marca, String modelo, int ano, int cilindrada) {
         super(marca, modelo, ano);
         this.cilindrada = cilindrada;
     }
@@ -12,7 +12,7 @@ public class Moto extends Veiculo {
         return cilindrada;
     }
 
-    public void setCilindrada(double cilindrada) {
+    public void setCilindrada(int cilindrada) {
         this.cilindrada = cilindrada;
     }
 
