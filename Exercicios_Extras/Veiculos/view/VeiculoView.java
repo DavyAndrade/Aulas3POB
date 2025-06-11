@@ -30,7 +30,7 @@ public class VeiculoView {
             opcao = sc.nextInt();
 
             switch (opcao) {
-                case 1:
+                case 1 -> {
                     System.out.println("=== Cadastro de Veículo ===");
                     System.out.println("Tipo de Veículo:");
                     System.out.println("1. Carro");
@@ -42,7 +42,7 @@ public class VeiculoView {
                     sc.nextLine(); // Limpar o buffer do scanner
 
                     switch (tipoVeiculo) {
-                        case 1:
+                        case 1 -> {
                             System.out.println("=".repeat(10));
                             System.out.println("Cadastro de Carro");
                             System.out.println("Placa: ");
@@ -60,7 +60,8 @@ public class VeiculoView {
                             System.out.println("Carro cadastrado com sucesso!");
                             System.out.println("=".repeat(10));
                             break;
-                        case 2:
+                        }
+                        case 2 -> {
                             System.out.println("=".repeat(10));
                             System.out.println("Placa: ");
                             String placaMoto = sc.nextLine();
@@ -77,7 +78,8 @@ public class VeiculoView {
                             System.out.println("Moto cadastrada com sucesso!");
                             System.out.println("=".repeat(10));
                             break;
-                        case 3:
+                        }
+                        case 3 -> {
                             System.out.println("=".repeat(10));
                             System.out.println("Placa: ");
                             String placaCaminhao = sc.nextLine();
@@ -95,26 +97,32 @@ public class VeiculoView {
                             System.out.println("Caminhão cadastrado com sucesso!");
                             System.out.println("=".repeat(10));
                             break;
-                        default:
+                        }
+                        default -> {
                             System.out.println("Opção inválida! Por favor, escolha um tipo de veículo válido.");
                             System.out.println("=".repeat(10));
                             continue;
+                        }
                     }
                     break;
+                }
 
-                case 2:
+                case 2 -> {
                     System.out.println("=".repeat(10));
                     controller.listarVeiculos(veiculos);
                     System.out.println("=".repeat(10));
                     break;
+                }
 
-                case 3:
+                case 3 -> {
                     System.out.println("Encerrando o programa...");
                     break;
+                }
 
-                default:
+                default -> {
                     System.out.println("Opção Inválida! Insira um valor válido.");
                     break;
+                }
             }
         } while (opcao != 3);
         sc.close();
