@@ -25,6 +25,23 @@ public class ProdutoController {
     }
 
     public void atualizarProduto(ArrayList<Produto> produtos, int id, String novoNome, int novaQuantidade) {
+        if (produtos.isEmpty()) {
+            System.out.println("Nenhum produto cadastrado para atualizar.");
+            return;
+        }
+
+        Produto produto = buscarProdutoPorId(produtos, id);
+
+        if (produto != null) {
+            produto.setNome(novoNome);
+            produto.setQuantidade(novaQuantidade);
+            System.out.println("Produto atualizado com sucesso.");
+            return;
+        } else {
+            System.out.println("Produto não encontrado.");
+            return;
+        }
+
         for (Produto produto : produtos) {
             if (produto.getId() == id) {
                 produto.setNome(novoNome);
@@ -37,13 +54,32 @@ public class ProdutoController {
     }
 
     public void removerProduto(ArrayList<Produto> produtos, int id) {
+        if (produtos.isEmpty()) {
+            System.out.println("Nenhum produto cadastrado para remover.");
+            return;
+        }
+
+        Produto produto = buscarProdutoPorId(produtos, id);
+
+        if (produto != null) {
+            produtos.remove(produto);
+            System.out.println("Produto removido com sucesso.");
+        } else {
+            System.out.println("Produto não encontrado.");
+        }
+    }
+
+    public Produto buscarProdutoPorId(ArrayList<Produto> produtos, int id) {
+        if (produtos.isEmpty()) {
+            return null;
+        }
+
         for (Produto produto : produtos) {
             if (produto.getId() == id) {
-                produtos.remove(produto);
-                System.out.println("Produto removido com sucesso.");
-                return;
+                return produto;
             }
         }
-        System.out.println("Produto não encontrado.");
+        
+        return null;
     }
 }
