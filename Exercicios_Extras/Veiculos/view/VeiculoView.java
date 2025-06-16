@@ -10,8 +10,6 @@ import Veiculos.model.Moto;
 import Veiculos.model.Veiculo;
 
 public class VeiculoView {
-    Scanner sc = new Scanner(System.in);
-
     public void exibirMenu() {
         VeiculoController controller = new VeiculoController();
         ArrayList<Veiculo> veiculos = new ArrayList<>();
