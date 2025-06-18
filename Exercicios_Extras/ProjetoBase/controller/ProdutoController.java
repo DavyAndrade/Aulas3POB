@@ -1,85 +1,66 @@
 package ProjetoBase.controller;
 
-import ProdutoBase.model.Produto;
+import ProjetoBase.model.Produto;
 import java.util.ArrayList;
 
-public class ProdutoController {
+public class ProdutoController implements IProdutoController {
+    ArrayList<Produto> produtosList;
 
-    public void cadastrarProduto(ArrayList<Produto> produtos, Produto produto) {
-        produtos.add(produto);
+    public ProdutoController() {
+        this.produtosList = new ArrayList<>();
     }
 
-    public void listarProdutos(ArrayList<Produto> produtos) {
-        if (produtos.isEmpty()) {
+    @Override
+    public void cadastrarProduto(int id, String nome, int quantidade) {
+        Produto produto = new Produto(id, nome, quantidade);
+        produtosList.add(produto);
+    }
+
+    @Override
+    public void listarProdutos() {
+        if (produtosList.isEmpty()) {
             System.out.println("Nenhum produto cadastrado.");
         } else {
-            System.out.println("--------------------------");
-            System.out.println("Lista de Produtos:");
-            for (Produto produto : produtos) {
+            for (Produto produto : produtosList) {
+                System.out.println("-".repeat(10));
                 System.out.println("ID: " + produto.getId());
                 System.out.println("Nome: " + produto.getNome());
                 System.out.println("Quantidade: " + produto.getQuantidade());
-                System.out.println("-------------------------");
+                System.out.println("-".repeat(10));
             }
         }
     }
 
-    public void atualizarProduto(ArrayList<Produto> produtos, int id, String novoNome, int novaQuantidade) {
-        if (produtos.isEmpty()) {
-            System.out.println("Nenhum produto cadastrado para atualizar.");
-            return;
-        }
-
-        Produto produto = buscarProdutoPorId(produtos, id);
-
+    @Override
+    public void atualizarProduto(int id, String novoNome, int novaQuantidade) {
+        Produto produto = buscarProdutoPorId(id);
         if (produto != null) {
             produto.setNome(novoNome);
             produto.setQuantidade(novaQuantidade);
-            System.out.println("Produto atualizado com sucesso.");
-            return;
+            System.out.println("Produto atualizado com sucesso!");
         } else {
             System.out.println("Produto não encontrado.");
-            return;
         }
-
-        for (Produto produto : produtos) {
-            if (produto.getId() == id) {
-                produto.setNome(novoNome);
-                produto.setQuantidade(novaQuantidade);
-                System.out.println("Produto atualizado com sucesso.");
-                return;
-            }
-        }
-        System.out.println("Produto não encontrado.");
     }
 
-    public void removerProduto(ArrayList<Produto> produtos, int id) {
-        if (produtos.isEmpty()) {
-            System.out.println("Nenhum produto cadastrado para remover.");
-            return;
-        }
-
-        Produto produto = buscarProdutoPorId(produtos, id);
-
+    @Override
+    public void removerProduto(int id) {
+        Produto produto = buscarProdutoPorId(id);
         if (produto != null) {
-            produtos.remove(produto);
-            System.out.println("Produto removido com sucesso.");
+            produtosList.remove(produto);
+            System.out.println("Produto removido com sucesso!");
         } else {
             System.out.println("Produto não encontrado.");
         }
     }
 
-    public Produto buscarProdutoPorId(ArrayList<Produto> produtos, int id) {
-        if (produtos.isEmpty()) {
-            return null;
-        }
-
-        for (Produto produto : produtos) {
+    @Override
+    public Produto buscarProdutoPorId(int id) {
+        for (Produto produto : produtosList) {
             if (produto.getId() == id) {
                 return produto;
             }
         }
-        
         return null;
     }
 }

@@ -1,9 +1,9 @@
-package ProdutoBase;
+package ProjetoBase;
 
-import ProdutoBase.view.ProdutoView;
+import ProjetoBase.view.ProdutoView;
 
 public class Main {
-    public void main(String[] args) {
+    public static void main(String[] args) {
         ProdutoView produtoView = new ProdutoView();
         produtoView.exibirMenu();
     }

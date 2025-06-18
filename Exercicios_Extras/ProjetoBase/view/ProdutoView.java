@@ -1,18 +1,16 @@
 package ProjetoBase.view;
 
-import ProdutoBase.model.Produto;
-import java.util.ArrayList;
 import java.util.Scanner;
-import ProdutoBase.controller.ProdutoController;
+import ProjetoBase.controller.ProdutoController;
 
 public class ProdutoView {
     public void exibirMenu() {
         Scanner sc = new Scanner(System.in);
         ProdutoController produtoController = new ProdutoController();
-        ArrayList<Produto> produtos = new ArrayList<>();
         int opcao;
 
         do {
+            System.out.println("-".repeat(20));
             System.out.println("Menu de Produtos:");
             System.out.println("1. Cadastrar Produto");
             System.out.println("2. Listar Produtos");
@@ -25,41 +23,64 @@ public class ProdutoView {
 
             switch (opcao) {
                 case 1 -> {
+                    System.out.println("-".repeat(20));
                     System.out.println("Cadastro de Produto:");
+
                     System.out.print("ID: ");
                     int id = sc.nextInt();
                     sc.nextLine();
+
                     System.out.print("Nome: ");
                     String nome = sc.nextLine();
+
                     System.out.print("Quantidade: ");
                     int quantidade = sc.nextInt();
-                    Produto produto = new Produto(id, nome, quantidade);
-                    produtoController.cadastrarProduto(produtos, produto);                }
+
+                    produtoController.cadastrarProduto(id, nome, quantidade);
+                    System.out.println("Produto cadastrado com sucesso!");
+                }
                 case 2 -> {
+                    System.out.println("-".repeat(20));
                     System.out.println("Listando Produtos:");
-                    produtoController.listarProdutos(produtos);
+                    produtoController.listarProdutos();
                 }
                 case 3 -> {
+                    System.out.println("-".repeat(20));
                     System.out.println("Atualizar Produto:");
+
                     System.out.print("ID do Produto a ser atualizado: ");
                     int id = sc.nextInt();
                     sc.nextLine();
+
                     System.out.print("Novo Nome: ");
                     String novoNome = sc.nextLine();
+
                     System.out.print("Nova Quantidade: ");
                     int novaQuantidade = sc.nextInt();
-                    produtoController.atualizarProduto(produtos, id, novoNome, novaQuantidade);
+
+                    produtoController.atualizarProduto(id, novoNome, novaQuantidade);
                 }
                 case 4 -> {
+                    System.out.println("-".repeat(20));
                     System.out.println("Remover Produto:");
+
                     System.out.print("ID do Produto a ser removido: ");
                     int id = sc.nextInt();
-                    produtoController.removerProduto(produtos, id);
+
+                    produtoController.removerProduto(id);
                 }
-                case 5 -> System.out.println("Saindo...");
-                default -> System.out.println("Opção inválida. Tente novamente.");
+                case 5 -> {
+                    System.out.println("-".repeat(20));
+                    System.out.println("Saindo...");
+                }
+
+                default -> {
+                    System.out.println("-".repeat(20));
+                    System.out.println("Opção inválida. Tente novamente.");
+                }
             }
 
-        }
+        } while (opcao != 5);
+        sc.close();
     }
 }
